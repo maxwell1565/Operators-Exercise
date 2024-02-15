@@ -3,7 +3,7 @@
     public class Program
     {
 
-        
+
 
         static void Main(string[] args)
         {
@@ -25,7 +25,25 @@
             int remainder = a % b;
 
             Console.WriteLine($"Answers to the operations: {sum}; {multiply}; {subtract}; {divide}; {modulus};");
-            Console.WriteLine($"17 divided by 4 is {quotent} with a remainder of {remainder}.");
+            Console.WriteLine($"{a} divided by {b} is {quotent} with a remainder of {remainder}.");
+
+            //-------------exercise 2-------------
+
+            Console.WriteLine("What is the radius of your circle?");
+            var userInput = Console.ReadLine();
+
+            var radius = double.Parse(userInput);
+
+            Console.WriteLine(AreaOfCircle(radius));
+
+        }
+
+        public static double AreaOfCircle(double radius)
+        {
+
+            var area = Math.PI * Math.Pow(radius, 2);
+
+            return area;
 
         }
     }
